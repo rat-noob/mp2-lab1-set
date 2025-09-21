@@ -63,33 +63,65 @@ int TBitField::GetLength(void) const // получить длину (к-во б�
 
 void TBitField::SetBit(const int n) // установить бит
 {
+    int MemMask = GetMemMask(n);
+    int MemIndex = GetMemIndex(n);
+    pMem[MemIndex] = pMem[MemIndex] | MemMask;
 
 }
 
 void TBitField::ClrBit(const int n) // очистить бит
 {
+    int MemMask = GetMemMask(n);
+    int MemIndex = GetMemIndex(n);
+    pMem[MemIndex] = pMem[MemIndex] & ~MemMask;
 }
 
 int TBitField::GetBit(const int n) const // получить значение бита
 {
-  return FAKE_INT;
+    int Bit;
+    int MemMask = GetMemMask(n);
+    int MemIndex = GetMemIndex(n);
+    Bit = pMem[MemIndex] & MemMask;
+    
+    return Bit;
 }
 
 // битовые операции
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание
-{
-    return FAKE_BITFIELD;
+{   
+    this->BitLen = bf.BitLen;
+    this->MemLen = bf.MemLen;
+    delete pMem;
+    pMem = new TELEM[MemLen];
+    
+    for (int i = 0; i < MemLen; i++)
+    {
+        pMem[i] = bf.pMem[i];
+    }
+    return *this;//возможно другой ретерн
 }
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
 {
-  return FAKE_INT;
+    if (BitLen != bf.BitLen) return 0;
+    if (MemLen != bf.MemLen) return 0;
+    for (int i = 0; i < MemLen; i++)
+    {
+        if (pMem[i] != bf.pMem[i]) return 0; /*break;*/
+    }
+    return 1;
 }
 
 int TBitField::operator!=(const TBitField &bf) const // сравнение
 {
-  return FAKE_INT;
+    if (BitLen != bf.BitLen) return 1;
+    if (MemLen != bf.MemLen) return 1;
+    for (int i = 0; i < MemLen; i++)
+    {
+        if (pMem[i] != bf.pMem[i]) return 1; /*break;*/
+    }
+    return 0;
 }
 
 TBitField TBitField::operator|(const TBitField &bf) // операция "или"
@@ -104,7 +136,11 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 
 TBitField TBitField::operator~(void) // отрицание
 {
-    return FAKE_BITFIELD;
+    for (int i = 0; i < MemLen; i++)
+    {
+        pMem[i] = ~pMem[i];
+    }
+    return *this;
 }
 
 // ввод/вывод
@@ -115,6 +151,17 @@ istream &operator>>(istream &istr, TBitField &bf) // ввод
 }
 
 ostream &operator<<(ostream &ostr, const TBitField &bf) // вывод
-{
+{   
+    
+    for (int i = 0; i < bf.MemLen; i++)
+    {
+        cout << bf.pMem[i]<<endl;
+    }
+    
+    
+    /*for (int i = bf.MemLen - 1; i > (-1); i--) это если по 0 и 1 выводить
+    {
+        cout<<
+    }*/
     return ostr;
 }
