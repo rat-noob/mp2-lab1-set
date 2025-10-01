@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/UNN/c++/set/mp2-lab1-set/out/build/cmake_install.cmake",
+		"D:/UNN/c++/set/mp2-lab1-set/out/build/src/cmake_install.cmake",
+		"D:/UNN/c++/set/mp2-lab1-set/out/build/samples/cmake_install.cmake",
+		"D:/UNN/c++/set/mp2-lab1-set/out/build/gtest/cmake_install.cmake",
+		"D:/UNN/c++/set/mp2-lab1-set/out/build/test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

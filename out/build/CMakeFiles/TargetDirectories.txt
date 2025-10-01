@@ -1,0 +1,6 @@
+D:/UNN/c++/set/mp2-lab1-set/out/build/CMakeFiles/ALL_BUILD.dir
+D:/UNN/c++/set/mp2-lab1-set/out/build/CMakeFiles/ZERO_CHECK.dir
+D:/UNN/c++/set/mp2-lab1-set/out/build/src/CMakeFiles/set.dir
+D:/UNN/c++/set/mp2-lab1-set/out/build/samples/CMakeFiles/sample_prime_numbers.dir
+D:/UNN/c++/set/mp2-lab1-set/out/build/gtest/CMakeFiles/gtest.dir
+D:/UNN/c++/set/mp2-lab1-set/out/build/test/CMakeFiles/test_set.dir
