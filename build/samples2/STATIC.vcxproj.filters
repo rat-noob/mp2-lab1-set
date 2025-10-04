@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\UNN\c++\set\mp2-lab1-set\samples2\crossroad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\UNN\c++\set\mp2-lab1-set\samples2\road.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\UNN\c++\set\mp2-lab1-set\samples2\trafficlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\UNN\c++\set\mp2-lab1-set\samples2\crossroad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\UNN\c++\set\mp2-lab1-set\samples2\trafficlight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\UNN\c++\set\mp2-lab1-set\samples2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A7CD96E7-678E-3FE3-9CC4-1D862BC1022C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1A1E36B6-2B6F-3C03-B733-03707788BF39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
