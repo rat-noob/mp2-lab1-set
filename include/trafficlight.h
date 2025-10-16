@@ -13,7 +13,7 @@ public:
 };
 
 class HuTrafficLight:public TrafficLight {
-	TSet l2(int r = 2);
+	TSet* l2;
 
 	/*TSet l2(2);*/
 	int color[2] = { 0,1 };
@@ -26,7 +26,7 @@ public:
 };
 class CarTrafficLight :public TrafficLight {
 	
-	TSet l2(int r = 3);
+	TSet *l2;
 
 	/*TSet l2(3);*/
 	int color[3] = { 0,1,2 };
