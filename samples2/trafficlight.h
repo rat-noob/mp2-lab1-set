@@ -12,7 +12,7 @@ public:
 	virtual void PrintColor() = 0;
 };
 
-class HuTrafficLight:public TrafficLight {
+class HuTrafficLight :public TrafficLight {
 	TSet* l2;
 
 	/*TSet l2(2);*/
@@ -25,8 +25,8 @@ public:
 	void PrintColor();
 };
 class CarTrafficLight :public TrafficLight {
-	
-	TSet *l2;
+
+	TSet* l2;
 
 	/*TSet l2(3);*/
 	int color[3] = { 0,1,2 };

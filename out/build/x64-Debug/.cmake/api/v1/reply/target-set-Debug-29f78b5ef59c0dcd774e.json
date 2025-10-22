@@ -74,9 +74,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2,
-				3
+				1
 			]
 		}
 	],
@@ -95,19 +93,15 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2,
-				3
+				1
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				4,
-				5,
-				6,
-				7
+				2,
+				3
 			]
 		}
 	],
@@ -116,19 +110,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/crossroad.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "src/tbitfield.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/trafficlight.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -139,17 +121,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/crossroad.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
 			"path" : "include/tbitfield.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "include/trafficlight.h",
 			"sourceGroupIndex" : 1
 		},
 		{

@@ -9,7 +9,7 @@ int HuTrafficLight::GetColor() {
 }
 void HuTrafficLight::ChangeLight() {
 	/*light = color[++light] % 2;*/
-	
+
 	if (l2->IsMember(1)) {
 		l2->DelElem(1); l2->InsElem(2);
 	}
@@ -17,7 +17,7 @@ void HuTrafficLight::ChangeLight() {
 		l2->InsElem(1);
 		l2->DelElem(2);
 	}
-	
+
 
 }
 void HuTrafficLight::PrintColor() {
@@ -44,7 +44,7 @@ CarTrafficLight::CarTrafficLight() {					//1-красный    2-зеленый   3-желтый
 }
 int CarTrafficLight::GetColor() {
 	/*return light;*/
-	for (int i = 1; i < l2->GetMaxPower()+1; i++)
+	for (int i = 1; i < l2->GetMaxPower() + 1; i++)
 	{
 		if (l2->IsMember(i)) return i;
 	}
@@ -81,9 +81,9 @@ void CarTrafficLight::PrintColor() {
 
 	}*/
 
-	if(l2->IsMember(1)) cout<< "Car: Red\n";
+	if (l2->IsMember(1)) cout << "Car: Red\n";
 	else {
-		if(l2->IsMember(2))cout << "Car: Green\n";
+		if (l2->IsMember(2))cout << "Car: Green\n";
 		else cout << "Car: Yellow\n";
 	}
 }

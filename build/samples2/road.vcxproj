@@ -193,7 +193,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="D:\UNN\c++\set\mp2-lab1-set\samples2\crossroad.cpp" />
     <ClCompile Include="D:\UNN\c++\set\mp2-lab1-set\samples2\road.cpp" />
+    <ClCompile Include="D:\UNN\c++\set\mp2-lab1-set\samples2\trafficlight.cpp" />
+    <ClInclude Include="D:\UNN\c++\set\mp2-lab1-set\samples2\crossroad.h" />
+    <ClInclude Include="D:\UNN\c++\set\mp2-lab1-set\samples2\trafficlight.h" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

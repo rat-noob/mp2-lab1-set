@@ -46,7 +46,8 @@ int TBitField::GetMemIndex(const int n) const // индекс Мем для би
     if (n > BitLen) throw - 1;
     if (n < 0) throw "err";
     int MemIndex;
-    MemIndex = n / (sz << 3);    /*(n + 31)/ (sizeof(MemLen) << 3);*/
+    /*MemIndex = n / (sz << 3);*/    /*(n + 31)/ (sizeof(MemLen) << 3);*/
+    MemIndex = n >> 5;
     return MemIndex;
 }
 
@@ -56,7 +57,8 @@ TELEM TBitField::GetMemMask(const int n) const // битовая маска дл
     if (n < 0) throw "err";
     //(45 & ~(32)) - остаток от деления 45 на 32
     TELEM MemMask;
-    TELEM Bit = n % (sz << 3);
+    /*TELEM Bit = n % (sz << 3);*/
+    TELEM Bit = n & (32 - 1);
 
     MemMask = 1<<Bit;
     return MemMask;
@@ -104,7 +106,7 @@ int TBitField::GetBit(const int n) const // получить значение б
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 {   
-    if (*this != bf) {
+    if (this != &bf) {
         this->BitLen = bf.BitLen;
         this->MemLen = bf.MemLen;
         delete[] pMem;
